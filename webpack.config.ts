@@ -3,7 +3,7 @@ import { Configuration } from 'webpack';
 
 const config: Configuration = {
     context: path.join(__dirname, 'src'),
-    entry: './main.tsx',
+    entry: './Main.tsx',
     output: {
         path: path.join(__dirname, 'dist'),
         filename: 'bundle.js'
@@ -13,6 +13,16 @@ const config: Configuration = {
             {
                 test: /\.tsx?$/,
                 use: 'ts-loader',
+            },
+            {
+                test: /\.css?$/,
+                use: [
+                    "style-loader",
+                    {
+                        loader: "css-loader",
+                        options: {url: false}
+                    }
+                ]
             },
         ],
     },

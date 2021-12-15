@@ -37,7 +37,7 @@ const MessageInput: React.FC<Props> = ({ setMessages, messages }) => {
                         value={inputTitle}
                         onChange={handleInputChange}
                     />
-                    <button onClick={handleSubmit} className="btn is-primary">追加</button>
+                    <button onClick={handleSubmit} className="btn is-primary">送信</button>
                 </div>
             </div>
         </div>
